@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Mailto Share Form</title>
+</head>
+<body>
+
+    <h1>Share a Restaurant Suggestion</h1>
+
+    <form id="shareForm">
+        
+        <label for="restaurantName">Restaurant Name:</label><br>
+        <input type="text" id="restaurantName" name="restaurantName" required><br><br>
+        
+        <label for="yourName">Your Name:</label><br>
+        <input type="text" id="yourName" name="yourName" required><br><br>
+        
+        <input type="submit" value="Draft Email">
+        
+    </form>
+
+    <p>
+        **Note:** Clicking the button will open your default email program to send the suggestion. 
+        Remember to change the `recipient@example.com` in the JavaScript file to your desired email.
+    </p>
+
+    <script src="script.js"></script> 
+
+</body>
+</html>
