@@ -26,7 +26,25 @@
         Remember to change the `recipient@example.com` in the JavaScript file to your desired email.
     </p>
 
-    <script src="script.js"></script> 
+    <script>const form = document.getElementById('shareForm');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    
+    const restaurant = document.getElementById('restaurantName').value;
+    const userName = document.getElementById('yourName').value;
+    
+    const subject = 'Restaurant Suggestion from ' + userName;
+    const body = `Hi,\n\nI recommend you check out this restaurant:\nRestaurant Name: ${restaurant}\nShared by: ${userName}\n\n`;
+    
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+    
+    const recipient = 'recipient@example.com'; 
+    const mailtoURL = `mailto:${recipient}?subject=${encodedSubject}&body=${encodedBody}`;
+    
+    window.location.href = mailtoURL;
+});</script> 
 
 </body>
 </html>
